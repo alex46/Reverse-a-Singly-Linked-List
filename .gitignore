@@ -1,0 +1,15 @@
+public static Node reverse(Node head){
+if(head == null) return null;
+
+Node cur = head;
+Node prev = null;
+
+while(cur!=null){
+Node next = cur.next;
+cur.next = prev;
+prev = cur;
+cur = next;
+}
+
+return prev;
+}
